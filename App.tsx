@@ -49,16 +49,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <Layout
-      appState={appState}
-      walletInput={walletInput}
-      onInputChange={handleInputChange}
-      onSubmit={handleSubmit}
-      result={result}
-    >
-      {/* If your Layout already renders the main UI, keep children empty.
-          If Layout expects children, you can move the UI inside here.
-          Below is the inlined UI (kept from your previous code). */}
+    <Layout>
       {appState === AppState.IDLE && (
         <div className="p-8">
           <div className="text-center mb-8">

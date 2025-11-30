@@ -10,6 +10,7 @@
     "start": "vite preview"
   },
   "dependencies": {
+    "@farcaster/frame-sdk": "^0.1.12",
     "@google/genai": "^1.30.0",
     "ethers": "^6.13.2",
     "react": "^19.0.0",
