@@ -13,10 +13,14 @@
   "splash_background_color": "#000000",
   "primary_category": "tools",
   "tags": ["base", "rewards", "analytics"],
-
   "accountAssociation": {
-    "header": "PASTE THE ENTIRE HEADER STRING FROM FARCASTER HERE",
-    "payload": "PASTE THE ENTIRE PAYLOAD STRING FROM FARCASTER HERE",
-    "signature": "PASTE THE ENTIRE SIGNATURE STRING FROM FARCASTER HERE"
+    "header": "eyJmaWQiOjUzODM0NCwidHlwZSI6ImF1dGgiLCJrZXkiOiIweDBlY2UwNUQyMzc5ZTljMjU1OGYzMjJmMzk5RTJFRUFBOTQ1N2E3ZkEifQ",
+    "payload": "eyJkb21haW4iOiJiYXNlLXJld2FyZHMtYXBwLnZlcmNlbC5hcHAifQ",
+    "signature": "5XhXUj/+9pcpNQev83LZXcGjpccB0q9lKVKmfSSqqyZ6PkF30VkmXWbH5/VydQzEx46NTPLaTKU2xz77UswzQRw="
   }
 }
+
+
+
+
+  
