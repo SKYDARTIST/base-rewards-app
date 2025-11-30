@@ -13,9 +13,10 @@
   "splash_background_color": "#000000",
   "primary_category": "tools",
   "tags": ["base", "rewards", "analytics"],
-  "account_association": {
-    "header": "",
-    "payload": "",
-    "signature": ""
+
+  "accountAssociation": {
+    "header": "PASTE THE ENTIRE HEADER STRING FROM FARCASTER HERE",
+    "payload": "PASTE THE ENTIRE PAYLOAD STRING FROM FARCASTER HERE",
+    "signature": "PASTE THE ENTIRE SIGNATURE STRING FROM FARCASTER HERE"
   }
 }
