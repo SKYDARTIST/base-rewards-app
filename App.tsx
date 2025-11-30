@@ -1,10 +1,22 @@
-import React, { useState, useCallback } from 'react';
+import { sdk } from "@farcaster/frame-sdk";
+import React, { useState, useCallback, useEffect } from 'react';
 import { Layout } from './components/Layout';
 import { ResultCard } from './components/ResultCard';
 import { getRewardEstimate } from './services/geminiService';
 import { AppState, EstimationResult } from './types';
 
 const App: React.FC = () => {
+  // Tell Base App that your mini app is ready
+  useEffect(() => {
+    try {
+      sdk.actions.ready();
+    } catch (err) {
+      // don't crash if sdk isn't available in dev
+      // eslint-disable-next-line no-console
+      console.warn("sdk.actions.ready() failed:", err);
+    }
+  }, []);
+
   const [appState, setAppState] = useState<AppState>(AppState.IDLE);
   const [walletInput, setWalletInput] = useState<string>('');
   const [result, setResult] = useState<EstimationResult | null>(null);
@@ -18,12 +30,13 @@ const App: React.FC = () => {
     if (!walletInput.trim()) return;
 
     setAppState(AppState.LOADING);
-    
+
     try {
       const data = await getRewardEstimate(walletInput);
       setResult(data);
       setAppState(AppState.RESULT);
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.error("Error fetching estimate:", error);
       setAppState(AppState.ERROR);
     }
@@ -36,7 +49,16 @@ const App: React.FC = () => {
   };
 
   return (
-    <Layout>
+    <Layout
+      appState={appState}
+      walletInput={walletInput}
+      onInputChange={handleInputChange}
+      onSubmit={handleSubmit}
+      result={result}
+    >
+      {/* If your Layout already renders the main UI, keep children empty.
+          If Layout expects children, you can move the UI inside here.
+          Below is the inlined UI (kept from your previous code). */}
       {appState === AppState.IDLE && (
         <div className="p-8">
           <div className="text-center mb-8">
@@ -86,11 +108,11 @@ const App: React.FC = () => {
 
       {appState === AppState.ERROR && (
         <div className="p-8 text-center">
-           <div className="inline-flex items-center justify-center w-12 h-12 bg-red-100 rounded-full mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-              </svg>
-            </div>
+          <div className="inline-flex items-center justify-center w-12 h-12 bg-red-100 rounded-full mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+          </div>
           <h3 className="text-lg font-medium text-gray-900 mb-2">Something went wrong</h3>
           <p className="text-gray-500 mb-6">We couldn't estimate your rewards right now.</p>
           <button
