@@ -1,31 +1,31 @@
 {
   "version": "1",
-  "name": "BASE REWARDS",
-  "subtitle": "Check your Base activity score instantly",
-  "description": "A simple mini app that estimates your Base ecosystem rewards.",
-  "homeUrl": "https://base-rewards-app.vercel.app/",
-  "iconUrl": "https://base-rewards-app.vercel.app/icon.png",
-  "imageUrl": "https://base-rewards-app.vercel.app/preview.png",
-  "splashImageUrl": "https://base-rewards-app.vercel.app/splash.png",
-  "splashBackgroundColor": "#87CEEB",
-  "primaryCategory": "tools",
-  "tags": ["base", "rewards", "analytics"],
-
+  "frame": {
+    "name": "BASE REWARDS",
+    "subtitle": "Check your Base activity score instantly",
+    "description": "A simple mini app that estimates your Base ecosystem rewards.",
+    "homeUrl": "https://base-rewards-app.vercel.app/",
+    "iconUrl": "https://base-rewards-app.vercel.app/icon.png",
+    "imageUrl": "https://base-rewards-app.vercel.app/preview.png",
+    "splashImageUrl": "https://base-rewards-app.vercel.app/splash.png",
+    "splashBackgroundColor": "#87CEEB",
+    "primaryCategory": "tools",
+    "tags": ["base","rewards","analytics"]
+  },
   "accountAssociation": {
     "header": "eyJmaWQiOjUzODM0NCwidHlwZSI6ImF1dGgiLCJrZXkiOiIweDBlY2UwNUQyMzc5ZTljMjU1OGYzMjJmMzk5RTJFRUFBOTQ1N2E3ZkEifQ",
     "payload": "eyJkb21haW4iOiJiYXNlLXJld2FyZHMtYXBwLnZlcmNlbC5hcHAifQ",
     "signature": "5XhXUj/+9pcpNQev83LZXcGjpccB0q9lKVKmfSSqqyZ6PkF30VkmXWbH5/VydQzEx46NTPLaTKU2xz77UswzQRw="
   },
-
   "miniapp": {
-    "homeUrl": "https://base-rewards-app.vercel.app/"
+    "homeUrl": "https://base-rewards-app.vercel.app/",
+    "name": "BASE REWARDS",
+    "iconUrl": "https://base-rewards-app.vercel.app/icon.png",
+    "imageUrl": "https://base-rewards-app.vercel.app/preview.png",
+    "splashImageUrl": "https://base-rewards-app.vercel.app/splash.png",
+    "description": "A simple mini app that estimates your Base ecosystem rewards."
   },
-
   "baseBuilder": {
     "ownerAddress": "0x1dA3A9E987E9AEFE2B90dFbaA6323637735ce56Bee"
   }
 }
-
-
-
-  
