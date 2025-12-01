@@ -1,31 +1,29 @@
 {
-  "version": "1",
-  "frame": {
-    "name": "BASE REWARDS",
-    "subtitle": "Check your Base activity score instantly",
-    "description": "A simple mini app that estimates your Base ecosystem rewards.",
-    "homeUrl": "https://base-rewards-app.vercel.app/",
-    "iconUrl": "https://base-rewards-app.vercel.app/icon.png",
-    "imageUrl": "https://base-rewards-app.vercel.app/preview.png",
-    "splashImageUrl": "https://base-rewards-app.vercel.app/splash.png",
-    "splashBackgroundColor": "#87CEEB",
-    "primaryCategory": "tools",
-    "tags": ["base","rewards","analytics"]
-  },
   "accountAssociation": {
     "header": "eyJmaWQiOjUzODM0NCwidHlwZSI6ImF1dGgiLCJrZXkiOiIweDBlY2UwNUQyMzc5ZTljMjU1OGYzMjJmMzk5RTJFRUFBOTQ1N2E3ZkEifQ",
     "payload": "eyJkb21haW4iOiJiYXNlLXJld2FyZHMtYXBwLnZlcmNlbC5hcHAifQ",
-    "signature": "5XhXUj/+9pcpNQev83LZXcGjpccB0q9lKVKmfSSqqyZ6PkF30VkmXWbH5/VydQzEx46NTPLaTKU2xz77UswzQRw="
+    "signature": "5XhXUj_-9pcpNQev83LZXcGjpccB0q9lKVKmfSSqqyZ6PkF30VkmXWbH5_VydQzEx46NTPLaTKU2xz77UswzQRw"
   },
   "miniapp": {
-    "homeUrl": "https://base-rewards-app.vercel.app/",
+    "version": "1",
     "name": "BASE REWARDS",
+    "tags": [
+      "social",
+      "messaging",
+      "base",
+      "community",
+      "finance"
+    ],
+    "homeUrl": "https://base-rewards-app.vercel.app/",
     "iconUrl": "https://base-rewards-app.vercel.app/icon.png",
     "imageUrl": "https://base-rewards-app.vercel.app/preview.png",
+    "subtitle": "Let's how Pre Rich you are :)",
+    "description": "This is just for fun.",
     "splashImageUrl": "https://base-rewards-app.vercel.app/splash.png",
-    "description": "A simple mini app that estimates your Base ecosystem rewards."
+    "primaryCategory": "social",
+    "splashBackgroundColor": "#87CEEB"
   },
   "baseBuilder": {
-    "ownerAddress": "0x1dA3A9E987E9AEFE2B90dFbaA6323637735ce56Bee"
+    "ownerAddress": "0x1dA3A9E987E9AEFE2B9dFbA6823637735ce56Bee"
   }
 }
